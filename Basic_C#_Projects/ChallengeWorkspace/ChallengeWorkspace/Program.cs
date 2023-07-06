@@ -65,21 +65,39 @@ namespace ChallengeWorkspace
             //    Console.ReadLine();
             //}
 
-            Console.WriteLine("Pick a number, any number.");
-            string pickedNumber = Console.ReadLine();
-            double num1 = Convert.ToDouble(pickedNumber);
-            if (num1 == 184)
-            {
-                Console.WriteLine("Your number is the same as mine!");
-                Console.ReadLine();
-            }
-            else
-            {
-                string result = num1 > 184 ? "Your number is bigger than mine" : "Your number is smaller than mine.";
-                Console.WriteLine(result);
-                Console.ReadLine();
+            //Console.WriteLine("Pick a number, any number.");
+            //string pickedNumber = Console.ReadLine();
+            //double num1 = Convert.ToDouble(pickedNumber);
+            //if (num1 == 184)
+            //{
+            //    Console.WriteLine("Your number is the same as mine!");
+            //    Console.ReadLine();
+            //}
+            //else
+            //{
+            //    string result = num1 > 184 ? "Your number is bigger than mine" : "Your number is smaller than mine.";
+            //    Console.WriteLine(result);
+            //    Console.ReadLine();
 
+
+            Console.WriteLine("Please pick a fruit choice by entering the letter of your choice:\nA.) Apple\nB.) Banana\nC.) Cantelope\nD.) Dragon Fruit");
+            string choice = Console.ReadLine();
+            switch (choice)
+            {
+                case "A":
+                    Console.WriteLine("Applese are the best.");
+                    break;
+                case "B":
+                    Console.WriteLine("Bananas are ok... a bit to phallic shaped for my taste... but hey man, you do you...");
+                    break;
+                case "C":
+                    Console.WriteLine("I like cantelope too, but they are often out of season, or not ripe enough... \nbut a good cantelope beats an apple any day!");
+                    break;
+                case "D":
+                    Console.WriteLine("I\'ve never had dragon fruit before.  Looks a little sus though...");
+                    break;
             }
+            Console.ReadLine();
         }
     }
 }

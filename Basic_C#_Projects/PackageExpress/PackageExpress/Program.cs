@@ -27,15 +27,22 @@ namespace PackageExpress
                 int height= Convert.ToInt32(Console.ReadLine());
                 Console.WriteLine("\nPlease enter the package length:");
                 int length = Convert.ToInt32(Console.ReadLine());
+                int dimSum = width + height + length;
+                if (dimSum > 50)
+                {
+                    Console.WriteLine("Package too big to be shipped via Package Express.  Have a good day!");
+                    Console.ReadLine();
+                }
+                else
+                {
+                    //Calculations
+                    int product = width * height * length;
+                    double quote = (product * roundedWeight) / 100;
 
-                //Calculations
-                int product = width * height * length;
-                double quote = (product * roundedWeight) / 100;
-
-                //Final output
-                Console.WriteLine("\nYour estimated total for shipping this package is: $" + quote + ".00\nThank you!");
-                Console.ReadLine();
-
+                    //Final output
+                    Console.WriteLine("\nYour estimated total for shipping this package is: $" + quote + ".00\nThank you!");
+                    Console.ReadLine();
+                }
 
             }
         }
