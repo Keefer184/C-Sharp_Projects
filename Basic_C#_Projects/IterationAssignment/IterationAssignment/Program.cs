@@ -56,8 +56,8 @@ namespace IterationAssignment
                 {
                     if (lineupName == baseballLineup[l])
                     {
-                        int positionNumber = l + 1;
-                        Console.WriteLine(positionNumber);
+                        Console.WriteLine(l);
+                        break;
                     }
                 }
                 Console.ReadLine();
@@ -73,8 +73,8 @@ namespace IterationAssignment
                 {
                     if (lineupName == baseballLineup[l])
                     {
-                        int positionNumber = l + 1;
-                        Console.WriteLine(positionNumber);
+                        Console.WriteLine(l);
+                        break;
                     }
                 }
                 Console.ReadLine();
@@ -112,59 +112,78 @@ namespace IterationAssignment
                 Console.ReadLine();
             }
 
-            //Part 6 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+            //Part 6 (Revised)-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
             List<string> colors = new List<string>() { "red", "orange", "yellow", "green", "blue", "indigo", "violet", "green" };
-            Console.WriteLine("This part of the app will tell you what index your favorire color is in the rainbow!\nWhat is your favorite color?");
-            string favColor = Console.ReadLine().ToLower();
-            if (colors.Contains(favColor))
+            List<string> seenColors = new List<string>();
+            foreach(string color in colors)
             {
-                int counter = 0;
-                foreach (string color in colors)
+                if (!seenColors.Contains(color))
                 {
-                    if (favColor == color)
-                    {
-                        Console.WriteLine(color );
-                        counter++;
-                        switch (counter)
-                        {
-                            case 1:
-                                Console.WriteLine("This is the first occurance of " + favColor);
-                                break;
-                            case 2:
-                                Console.WriteLine("This is the second occurance of " + favColor);
-                                break;
-                        }
-                    }
+                    seenColors.Add(color);
+                    Console.WriteLine(color + " has not been seen.");
                 }
-                Console.ReadLine();
+                else
+                {
+                    Console.WriteLine(color + " has already been seen");
+                }
             }
-            else
-            {
-                while (!colors.Contains(favColor))
-                {
-                    Console.WriteLine("I\'m sorry, the color you selected is not part of the rainbow.  Please select another color.  (Hint: ROY G. Biv)");
-                    favColor = Console.ReadLine().ToLower();
-                }
-                int counter = 0;
-                foreach (string color in colors)
-                {
-                    if (favColor == color)
-                    {
-                        Console.WriteLine(color);
-                        counter++;
-                        switch (counter)
-                        {
-                            case 1:
-                                Console.WriteLine("This is the first occurance of " + favColor);
-                                break;
-                            case 2:
-                                Console.WriteLine("This is the second occurance of " + favColor);
-                                break;
-                        }
-                    }
-                }
-                Console.ReadLine();
-            }
+            Console.ReadLine();
+
+
+            ////Part 6 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+            //List<string> colors = new List<string>() { "red", "orange", "yellow", "green", "blue", "indigo", "violet", "green" };
+            //Console.WriteLine("This part of the app will tell you what index your favorire color is in the rainbow!\nWhat is your favorite color?");
+            //string favColor = Console.ReadLine().ToLower();
+            //if (colors.Contains(favColor))
+            //{
+            //    int counter = 0;
+            //    foreach (string color in colors)
+            //    {
+            //        if (favColor == color)
+            //        {
+            //            Console.WriteLine(color);
+            //            counter++;
+            //            switch (counter)
+            //            {
+            //                case 1:
+            //                    Console.WriteLine("This is the first occurance of " + favColor);
+            //                    break;
+            //                case 2:
+            //                    Console.WriteLine("This is the second occurance of " + favColor);
+            //                    break;
+            //            }
+            //        }
+            //    }
+            //    Console.ReadLine();
+            //}
+            //else
+            //{
+            //    while (!colors.Contains(favColor))
+            //    {
+            //        Console.WriteLine("I\'m sorry, the color you selected is not part of the rainbow.  Please select another color.  (Hint: ROY G. Biv)");
+            //        favColor = Console.ReadLine().ToLower();
+            //    }
+            //    int counter = 0;
+            //    foreach (string color in colors)
+            //    {
+            //        if (favColor == color)
+            //        {
+            //            Console.WriteLine(color);
+            //            counter++;
+            //            switch (counter)
+            //            {
+            //                case 1:
+            //                    Console.WriteLine("This is the first occurance of " + favColor);
+            //                    break;
+            //                case 2:
+            //                    Console.WriteLine("This is the second occurance of " + favColor);
+            //                    break;
+            //            }
+            //        }
+            //    }
+            //    Console.ReadLine();
+     
 
         }
     }
