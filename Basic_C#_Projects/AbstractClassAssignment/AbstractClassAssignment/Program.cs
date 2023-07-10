@@ -13,6 +13,11 @@ namespace AbstractClassAssignment
             Employee employee = new Employee { firstName = "Sample", lastName = "Student" };
             employee.SayName();
             Console.ReadLine();
+
+            //calling interface
+            IQuittable employee2 = new Employee { firstName = "Goingto", lastName = "Leavehere" };
+            employee2.Quit();
+            Console.ReadLine();
         }
     }
 }
