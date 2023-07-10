@@ -10,14 +10,19 @@ namespace AbstractClassAssignment
     {
         static void Main(string[] args)
         {
-            Employee employee = new Employee { firstName = "Sample", lastName = "Student" };
+            Employee employee = new Employee { firstName = "Sample", lastName = "Student" , Id = 34259};
             employee.SayName();
             Console.ReadLine();
 
             //calling interface
-            IQuittable employee2 = new Employee { firstName = "Goingto", lastName = "Leavehere" };
+            Employee employee2 = new Employee { firstName = "Goingto", lastName = "Leavehere" , Id = 24691};
             employee2.Quit();
             Console.ReadLine();
+
+            bool employeeMatch = employee == employee2;
+            Console.WriteLine(employeeMatch);
+            Console.ReadLine();
+
         }
     }
 }

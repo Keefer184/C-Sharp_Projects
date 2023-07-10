@@ -17,5 +17,31 @@ namespace AbstractClassAssignment
         {
             Console.WriteLine(firstName + " "+ lastName + " has now quit and will be removed from the system.");
         }
+
+        public static bool operator== (Employee employee1, Employee employee2)
+        {
+            bool employeeMatch = employee1.Id == employee2.Id ? true : false;
+            return employeeMatch;
+        }
+
+        public static bool operator!= (Employee employee1, Employee employee2)
+        {
+            bool employeeNotMatch = employee1.Id != employee2.Id ? true : false;
+            return employeeNotMatch;
+        }
+
+        public override bool Equals(object obj)
+        {
+            return base.Equals(obj);
+        }
+
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
+        }
+
+
+        public int Id { get; set; }
+
     }
 }
