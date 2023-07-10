@@ -12,9 +12,7 @@ namespace MethodAssignment4
         {
             Voidpractice data = new Voidpractice();
             data.Nonsense(5, 12);
-            int yup = 7;
-            int huh = 9;
-            data.Nonsense(yup, huh);
+            data.Nonsense(var1: 7, var2: 9);
             Console.ReadLine();
 
         }
