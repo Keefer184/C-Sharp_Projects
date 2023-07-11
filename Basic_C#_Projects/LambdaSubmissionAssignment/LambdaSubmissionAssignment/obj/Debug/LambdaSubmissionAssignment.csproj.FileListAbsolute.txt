@@ -1,0 +1,7 @@
+C:\Users\keefe\source\repos\C-Sharp_Projects\Basic_C#_Projects\LambdaSubmissionAssignment\LambdaSubmissionAssignment\obj\Debug\LambdaSubmissionAssignment.csproj.AssemblyReference.cache
+C:\Users\keefe\source\repos\C-Sharp_Projects\Basic_C#_Projects\LambdaSubmissionAssignment\LambdaSubmissionAssignment\obj\Debug\LambdaSubmissionAssignment.csproj.CoreCompileInputs.cache
+C:\Users\keefe\source\repos\C-Sharp_Projects\Basic_C#_Projects\LambdaSubmissionAssignment\LambdaSubmissionAssignment\bin\Debug\LambdaSubmissionAssignment.exe.config
+C:\Users\keefe\source\repos\C-Sharp_Projects\Basic_C#_Projects\LambdaSubmissionAssignment\LambdaSubmissionAssignment\bin\Debug\LambdaSubmissionAssignment.exe
+C:\Users\keefe\source\repos\C-Sharp_Projects\Basic_C#_Projects\LambdaSubmissionAssignment\LambdaSubmissionAssignment\bin\Debug\LambdaSubmissionAssignment.pdb
+C:\Users\keefe\source\repos\C-Sharp_Projects\Basic_C#_Projects\LambdaSubmissionAssignment\LambdaSubmissionAssignment\obj\Debug\LambdaSubmissionAssignment.exe
+C:\Users\keefe\source\repos\C-Sharp_Projects\Basic_C#_Projects\LambdaSubmissionAssignment\LambdaSubmissionAssignment\obj\Debug\LambdaSubmissionAssignment.pdb
