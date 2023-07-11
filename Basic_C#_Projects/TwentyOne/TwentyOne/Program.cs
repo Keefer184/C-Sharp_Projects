@@ -10,16 +10,26 @@ namespace TwentyOne
     {
         static void Main(string[] args)
         {
-            
-            Deck deck = new Deck();
-
-            deck.Shuffle(3);
-
-            foreach (Card card in deck.Cards)
+            Console.WriteLine("Welcome to Matt\'s Casino! \nLet\'s start by telling me your name.");
+            string playerName = Console.ReadLine();
+            Console.WriteLine("Thank you {0}, and how much money will you be playing with today?",playerName);
+            int bank = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Ok {0}, would you like to join a game of 21?", playerName);
+            string answer = Console.ReadLine().ToLower();
+            if (answer == "yes" || answer == "yeah" || answer == "y" || answer == "ya")
             {
-                Console.WriteLine(card.Face + " of " + card.Suit);
+                Player player = new Player(playerName,bank);
+                Game game = new TwentyOneGame();
+                game += player;
+                player.isActivelyPlaying = true;
+                while(player.isActivelyPlaying && player.Balance > 0)
+                {
+                    game.Play();
+                }
+                game -= player;
+                Console.WriteLine("Thank you for playing!");
             }
-            Console.WriteLine(deck.Cards.Count);
+            Console.WriteLine("Feel free to look around the casino.  Bye for now!");
             Console.ReadLine();
         }
         
